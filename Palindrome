@@ -1,0 +1,21 @@
+def is_palindrome(s):
+    # Convert the string to lowercase to make it case-insensitive
+    s = s.lower()
+    # Remove non-alphanumeric characters from the string
+    s = ''.join(e for e in s if e.isalnum())
+    # Check if the string is equal to its reverse
+    return s == s[::-1]
+
+# Input the number of test cases
+T = int(input())
+
+# Iterate through each test case
+for _ in range(T):
+    # Input the string for this test case
+    str_input = input()
+    
+    # Check if the input string is a palindrome
+    if is_palindrome(str_input):
+        print("It is a palindrome")
+    else:
+        print("It is not a palindrome")
